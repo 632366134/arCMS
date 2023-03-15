@@ -1,0 +1,220 @@
+.newsBox {
+  $leftWidth: 275px !default;
+  $btnHeight: 47px !default;
+  $maHeight:5px!default;
+  height: 100%;
+  display: flex;
+  // font-size: 14px;
+font-size: var(--smallTitleSize);
+
+  .newsType {
+    width: $leftWidth;
+    flex: 0 0 $leftWidth;
+    display: flex;
+    flex-direction: column;
+    .newsTypeList {
+      background: #fff;
+      // height: calc(100% - #{$maHeight} - #{$btnHeight});
+      flex: 1;
+      overflow-y: auto;
+      padding-bottom: 14px;
+      box-sizing: border-box;
+      .newTypeItem {
+        padding: 0 10px;
+        box-sizing: border-box;
+      }
+    }
+
+    .newTypeItem {
+      position: relative;
+      display: flex;
+      color: #1b1b1b;
+      height: 60px;
+      cursor: pointer;
+      .newsTypeName {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        padding-left: 60px;
+        box-sizing: border-box;
+      }
+      .newsTypeControl {
+        display: flex;
+        flex: 0 0 68px;
+        justify-content: center;
+        align-items: center;
+        ::v-deep {
+          .el-button {
+            // font-size: 14px;
+font-size: var(--bigBtnSize);
+
+          }
+        }
+      }
+      &.active {
+        color: #419fff;
+        &:before {
+          content: "";
+          display: block;
+          width: 10px;
+          height: 50px;
+          position: absolute;
+          left: 0;
+          top: 5px;
+          background: #419fff;
+        }
+      }
+      &.btn {
+        margin-bottom: 5px;
+        height: $btnHeight;
+        .el-button {
+          width: 100%;
+        }
+      }
+      &.createBtn {
+        color: #419fff;
+        height: $btnHeight;
+        margin-top: 20px;
+        .newsTypeName {
+          border: 1px solid #419fff;
+          padding-left: 0;
+          text-align: center;
+          cursor: pointer;
+          box-sizing: border-box;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0 5px;
+          &.cancel{
+            border-color: #999;
+          }
+          &.danger{
+            border-color: #F56C6C;
+          }
+        }
+      }
+    }
+  }
+  .newsInfoBox {
+    flex: 1;
+    background: #fff;
+    margin-left: 13px;
+    padding-left: 21px;
+    padding-right: 70px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    padding-bottom: 20px;
+    .titleBox {
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      ::v-deep {
+        .el-form-item {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .line {
+      width: 100%;
+      height: 1px;
+      background: #e6e6e6;
+    }
+    .infoList {
+      .infoItem {
+        display: flex;
+        padding: 30px 0 27px;
+        border-bottom: 1px dashed #acacac;
+        &:last-child {
+          border-bottom: 0;
+        }
+        .infoLeft {
+          flex: 0 0 200px;
+          img {
+            width: 200px;
+            height: 129px;
+          }
+        }
+        .infoRight {
+          flex: 1;
+          width: calc(100% - 200px);
+          padding-left: 16px;
+          box-sizing: border-box;
+          .infoTitle {
+            color: #1c1c1c;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            .infoTitleText {
+              flex: 1;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          }
+          .infoMain {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            line-height: 25px;
+            // font-size: 12px;
+font-size: var(--fuzhuSize);
+
+            color: #8c8c8c;
+            margin-bottom: 16px;
+            word-break: break-all;
+            text-align: justify;
+          }
+          .infoBottom {
+            display: flex;
+            justify-content: space-between;
+            // font-size: 12px;
+font-size: var(--fuzhuSize);
+
+            .infoTime {
+              color: #8b8b8b;
+            }
+            .infoControl {
+              display: flex;
+              // font-size: 12px;
+font-size: var(--fuzhuSize);
+
+              ::v-deep {
+                .el-button--small {
+                  padding: 8px 15px;
+                }
+              }
+              .botBtn {
+                // height: 30px;
+                // padding: 0 16px;
+                box-sizing: border-box;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+              }
+              .resetBtn {
+                color: #419fff;
+                border: 1px solid #419fff;
+                margin-right: 20px;
+              }
+              .infoBtn {
+                color: #fff;
+                background: #419fff;
+              }
+              img {
+                width: 15px;
+                height: 12px;
+                margin-right: 7px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

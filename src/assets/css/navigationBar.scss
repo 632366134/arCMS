@@ -1,0 +1,46 @@
+.navigationMain {
+  padding: 4px 15px;
+  box-sizing: border-box;
+  margin-left: -4px;
+  box-shadow: 0px 0px 10px #d1d1d1;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  ::v-deep {
+    .el-scrollbar__bar.is-vertical {
+      width: 0;
+    }
+    .el-scrollbar__bar.is-horizontal {
+      height: 0!important;
+    }
+    .el-scrollbar__wrap {
+      overflow: auto;
+      margin-right: 0 !important;
+      margin-bottom: 0 !important;
+    }
+  }
+  .tags {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    height: 26px;
+    line-height: 26px;
+    border: 1px solid #d8dce5;
+    color: #495060;
+    background: #fff;
+    padding: 0 8px;
+    font-size: 12px;
+    margin-left: 5px;
+    user-select: none;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  .show {
+    color: red;
+  }
+}

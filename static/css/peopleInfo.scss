@@ -1,0 +1,185 @@
+.daoqi {
+    color: #db8183;
+    margin-left: 20px;
+  }
+  .peopleInfo {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    padding-bottom: 15px;
+    background: #fff;
+    .baseBox {
+      display: flex;
+      padding: 5px 15px;
+      box-sizing: border-box;
+      .baseInfoBox {
+        width: 100%;
+        display: flex;
+        .head {
+          flex: 0 0 240px;
+          // width: 180px;
+          display: flex;
+          align-items: center;
+          box-sizing: border-box;
+          border: 1px solid #efefef;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          .picInfo {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .picMenu {
+            flex: 0 0 30px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            border-top: 1px solid #efefef;
+            .menuItem {
+              position: relative;
+              height: 100%;
+              text-align: center;
+              line-height: 30px;
+              overflow: hidden;
+              flex: 1;
+              cursor: pointer;
+              background: #00BAFF;
+              color: #fff;
+              // font-size: 13px;
+font-size: var(--fuzhuSize);
+
+              input[type="file"] {
+                position: absolute;
+                left: 0;
+                top: 0;
+                font-size: 50em;
+                opacity: 0;
+                cursor: pointer;
+              }
+            }
+            .cancelItem {
+              background: #ddd;
+              color: #333;
+            }
+          }
+          img {
+            width: 80%;
+            max-width: 180px;
+            max-height: 250px;
+          }
+        }
+        .baseInfoRight {
+          // font-size: 14px;
+  font-size: var(--smallTitleSize);
+
+          flex: 4;
+          width: 80%;
+          // display: flex;
+          border: 1px solid #efefef;
+          box-sizing: border-box;
+          border-left: 0;
+          .baseInfoItem {
+            flex: 1;
+            width: 100%;
+            display: flex;
+            border-bottom: 1px solid #efefef;
+            box-sizing: border-box;
+            &:last-child {
+              border-bottom: 0;
+            }
+            .baseInfoChild {
+              flex: 1;
+              display: flex;
+              & > div {
+                border-right: 1px solid #efefef;
+                box-sizing: border-box;
+                height: 40px;
+                line-height: 40px;
+                align-items: center;
+                padding-left: 10px;
+                &:last-child {
+                  border-right: 0;
+                }
+              }
+              .baseInfoTitle {
+                flex: 0 0 130px;
+                background: #f6f4f6;
+                // font-size: 13px;
+font-size: var(--fuzhuSize);
+
+              }
+              .baseInfoText {
+                  display: flex;
+                flex: 1;
+                padding-right: 10px;
+                box-sizing: border-box;
+              }
+            }
+          }
+        }
+      }
+    }
+    .info {
+      padding: 5px 15px;
+      box-sizing: border-box;
+      min-height: 100px;
+      ::v-deep {
+        .el-form-item {
+          margin-bottom: 0;
+        }
+      }
+      .hetong {
+        color: $blue;
+        cursor: pointer;
+      }
+    }
+  }
+  .texts {
+    ::v-deep {
+      span {
+        margin-right: 10px;
+      }
+    }
+  }
+  .chooseFileBox {
+      // margin-left: 15px;
+    ::v-deep {
+      & > div {
+        transform: scale(0.8);
+      }
+    }
+  }
+  .showFileBox{
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      img{
+          display: block;
+          height: 30px;
+          margin-right: 10px;
+      }
+  }
+  .jinaliName{
+    display: inline-block;
+    max-width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-right: 10px;
+  }
+  .fileInfoBox {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    .fileProgress {
+      flex: 1;
+      margin: 0 10px;
+    }
+    .fileControl {
+      flex: 0 0 30px;
+      text-align: center;
+    }
+  }

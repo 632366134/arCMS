@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <script>
+    var protocol = window.location.protocol
+    var host = window.location.host
+    // const { protocol, host } = window.location
+    if (host.indexOf('localhost') == -1 && host.indexOf('192') == -1 && protocol === 'http:') {
+      window.location.href = window.location.href.replace('http:', 'https:')
+    }
+  </script>
+  <meta charset="utf-8">
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+  <meta name="keywords" content="AR后台系统">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-store">
+  <meta name="referrer" content="never">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="icon" href="/static/images/logo.jpeg" type="image/x-icon">
+  <script src="./static/js/AFrame/aframe-master.min.js"></script>
+  <script src="./static/js/AFrame/aframe-extras.min.js"></script>
+  <!-- <link rel="stylesheet" href="<%= htmlWebpackPlugin.options.baseUrl %>/element-ui/lib/theme-chalk/index.css"> -->
+  <title>AR后台系统</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    #loading {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
+
+    #loading img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 150px;
+      height: 150px;
+      margin-left: -75px;
+      margin-top: -75px;
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <div id="loading"><img src="./static/images/loading.gif" alt=""></div>
+  <script>
+    if (window.navigator.userAgent.indexOf("Trident") != -1) {
+      document.body.innerHTML = '<div style="text-align:center;margin-top:50px;"><img src="./static/images/jisuTips.png"/></div>'
+      document.getElementById('loading').style.display = 'none'
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+.infoBox {
+    position: relative;
+    height: 100%;
+    $bgWidth: 337px;
+    background: #fff;
+    // font-size: 14px;
+font-size: var(--smallTitleSize);
+
+    .bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: $bgWidth;
+        height: 100%;
+        background-image: url("~@assets/images/newsSlide.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        &.right {
+            right: 0;
+            left: auto;
+            transform: rotateY(180deg);
+        }
+    }
+    .mainInfo {
+        position: relative;
+        z-index: 1;
+        // width: calc(100% - 2 * #{$bgWidth});
+        width: 100%;
+        padding: 0 $bgWidth;
+        box-sizing: border-box;
+        // margin-left: $bgWidth;
+        overflow-y: auto;
+        height: 100%;
+        .mainTitle {
+            border-bottom: 1px solid #eeeeee;
+            line-height: 44px;
+            .blue {
+                color: #419fff;
+            }
+        }
+        .infoTitle {
+            padding: 20px 0;
+            border-bottom: 1px solid #eeeeee;
+            .titleText {
+                text-align: center;
+                color: #1c1c1c;
+                font-size: 16px;
+            }
+            .infoTime {
+                margin-top: 14px;
+                display: flex;
+                justify-content: center;
+                // font-size: 12px;
+font-size: var(--fuzhuSize);
+
+                color: #8d8d8d;
+                .time{
+                    margin-right: 15px;
+                }
+            }
+        }
+        .editInfo{
+            margin-top: 24px;
+            font-size: 13px;
+            padding: 0 50px;
+            box-sizing: border-box;
+            &>div{
+                margin-bottom: 19px;
+            }
+            .text{
+                line-height: 26px;
+            }
+            .img{
+                text-align: center;
+                img{
+                    width: 399px;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

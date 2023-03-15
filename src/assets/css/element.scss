@@ -1,0 +1,28 @@
+.el-button--info {
+    background: #d9e2fd;
+    color: #829fff;
+    border-color: #829FFF;
+}
+
+.el-button--info:focus,
+.el-button--info:hover {
+    background: #e4e9f8;
+    color: #829fff;
+    border-color: #9fb3f7;
+}
+.el-upload--picture-card{
+    border-style: solid;
+}
+
+.el-button--primary {
+    background: #829FFF;
+    color: #fff;
+    border-color: #829FFF;
+}
+
+.el-button--primary:focus,
+.el-button--primary:hover {
+    background: #95aefe;
+    border-color: #95aefe;
+    color: #fff;
+}

@@ -1,0 +1,29 @@
+.cancel {
+    width: 100%;
+    height: 370px;
+    @media screen and (min-width: 1200px) {
+      height: 400px;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    .loadings {
+      margin-bottom: 10px;
+      flex: 1;
+      margin-top: 27px;
+      img{
+        width: 150px;
+        height: 150px;
+        text-align: center;
+      }
+    }
+    .buttons{
+      width: 100%;
+    .button{
+      height: 42px;
+      width: 100%;
+    }
+    }
+  }
